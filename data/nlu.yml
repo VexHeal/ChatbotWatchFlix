@@ -1,0 +1,200 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - You're looking sharp
+    - I love you
+    - fantastic
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: movies_consluting
+  examples: |
+    - I want to see what movies are on streaming
+    - I want to see what movies are on the WatchFlix
+    - movies
+    - check movies
+    - I want to check what movies are available on streaming media
+    - I would like to check what movies are available on streaming media
+    - films
+    - check films
+
+- intent: search_movies
+  examples: |
+    - I want to look up [007:NoTimeToDie]{"entity": "movies_name"}
+    - I want to look up [KnivesOut]{"entity": "movies_name"}
+    - I want to look up [She:hulk]{"entity": "movies_name"}
+    - I want to look up [Thor:LoveAndThunder]{"entity": "movies_name"}
+    - I want to look up [Cyberpunk:Edgerunner]{"entity": "movies_name"}
+    - look for [Cyberpunk:Edgerunner]{"entity": "movies_name"}
+    - look for [Thor:LoveAndThunder]{"entity": "movies_name"}
+    - look for [006:nothing]{"entity": "movies_name"}
+    - look for [She:hulk]{"entity": "movies_name"}
+    - look for [007:NoTimeToDie]{"entity": "movies_name"}
+    - look for [KnivesOut]{"entity": "movies_name"}
+    - look for [Inception]{"entity": "movies_name"}
+    - look for [Interstellar]{"entity": "movies_name"}
+    - look for [Tenet]{"entity": "movies_name"}
+    - look for [Zootopia]{"entity": "movies_name"}
+    - look for [BigHero6]{"entity": "movies_name"}
+    - look for [MoonKnight]{"entity": "movies_name"}
+    - [007:NoTimeToDie]{"entity": "movies_name"}
+    - [She:hulk]{"entity": "movies_name"}
+    - [KnivesOut]{"entity": "movies_name"}
+    - [MoonKnight]{"entity": "movies_name"}
+    - [BigHero6]{"entity": "movies_name"}
+    - [Zootopia]{"entity": "movies_name"}
+    - [Tenet]{"entity": "movies_name"}
+    - [Inception]{"entity": "movies_name"}
+    - [Interstellar]{"entity": "movies_name"}
+    - [Cyberpunk:Edgerunner]{"entity": "movies_name"}
+    - [Thor:LoveAndThunder]{"entity": "movies_name"}
+
+- intent: consult_member_service
+  examples: |
+    - I'd like a subscription
+    - What's the membership subscription service here
+    - Membership subscription
+    - subscription
+
+- intent: other_problems
+  examples: |
+    - What day is today?
+    - What's the weather like today
+    - What's the date today
+    - Are you a man or a woman
+
+- intent: swear_word
+  examples: |
+    - fuck
+    - Damn it
+    - Holy fuck
+    - Fuck it
+    - What the fuck
+    - shut up
+    - Fuck off
+    - holy shit
+    - kiss my ass
+    - you mother fucker
+    - you son of a bitch
+    - go fuck yourself
+    - Bullshit
+    - Who do you think you are
+    - You’re a jerk
+    - I don’t want to see your face
+    - You make me sick
+
+- intent: thanks
+  examples: |
+    - Thank you
+    - Thanks
+    - Much obliged
+
+- intent: laugh
+  examples: |
+    - Ha Ha
+    - hhhhhh
+    - haha
+    - haw haw
+
+- intent: daily_greeting
+  examples: |
+    - How are you
+    - How are you feeling today
+
+- intent: tell_jokes
+  examples: |
+    - joke
+    - tell a joke
+    - How about some jokes
+
+- intent: new_user
+  examples: |
+    - new user
+    - I'm a new user
+    - Two movies for free
+    - I haven't been a member yet

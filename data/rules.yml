@@ -1,0 +1,38 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Say nice_word anytime the user says
+  steps:
+  - intent: mood_great
+  - action: utter_nice_word
+
+- rule: Say thanks anytime the user says
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+
+- rule: Say haha anytime the user says
+  steps:
+    - intent: laugh
+    - action: utter_laugh
+
+- rule: Say daily greating anytime the user says
+  steps:
+    - intent: daily_greeting
+    - action: utter_daily_greeting
+
+- rule: Say tell jokes anytime the user says
+  steps:
+    - intent: tell_jokes
+    - action: utter_tell_jokes

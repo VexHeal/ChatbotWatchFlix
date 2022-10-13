@@ -1,0 +1,68 @@
+version: "3.1"
+
+stories:
+
+ - story: Consulting services
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - action: utter_offer_help
+
+ - story: Movies & TV Consulting
+   steps:
+   - intent: movies_consluting
+   - action: utter_movies
+   - action: action_list
+   - intent: search_movies
+   - slot_was_set:
+     - movies_name: movies_name
+   - action: action_movies_search
+
+ - story: Users consult streaming subscription services
+   steps:
+   - intent: consult_member_service
+   - action: utter_member_service
+   - action: utter_confirm
+   - checkpoint: check_asked_question
+
+ - story: handle user affirm
+   steps:
+   - checkpoint: check_asked_question
+   - intent: affirm
+   - action: utter_handle_affirmation
+
+ - story: handle user deny
+   steps:
+   - checkpoint: check_asked_question
+   - intent: deny
+   - action: utter_handle_denial
+
+ - story: user choose free-service
+ - steps:
+   - checkpoint: check_asked_question
+   - intent: new_user
+   - action: utter_choose_free
+
+ - story: Transfer to human service
+   steps:
+   - intent: other_problems
+   - action: utter_reply_sorry
+   - action: utter_manual_service
+   - checkpoint: ask_manual_service
+
+ - story: Confirm human service
+   steps:
+   - checkpoint: ask_manual_service
+   - intent: affirm
+   - action: utter_affirm_manual
+
+ - story: No manual service
+   steps:
+   - checkpoint: ask_manual_service
+   - intent: deny
+   - action: utter_deny_manual
+
+ - story: Swear word detection
+   steps:
+   - intent: swear_word
+   - action: utter_swear_word

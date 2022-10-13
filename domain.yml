@@ -1,0 +1,103 @@
+version: '3.1'
+intents:
+  - TV_series_consluting
+  - affirm
+  - bot_challenge
+  - consult_member_service
+  - deny
+  - goodbye
+  - greet
+  - mood_great
+  - mood_unhappy
+  - movies_consluting
+  - other_problems
+  - search_movies
+  - swear_word
+  - new_user
+  - thanks
+  - laugh
+  - daily_greeting
+  - tell_jokes
+
+actions:
+  - action_list
+  - action_movies_search
+
+entities:
+  - movies_name
+
+slots:
+  movies_name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: movies_name
+
+
+responses:
+  utter_greet:
+  - text: Hello, I am the WatchFlix robot, you can ask me about TV series, movies, membership subscription plan and other services on WtachFlix.
+  utter_offer_help:
+  - text: What can I do for you?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_movies:
+  - text: "Here's what's available right now on WtachFlix:"
+  utter_member_service:
+  - text: "We have the following subscription options:\n
+  \t1.$9.99/month(NO ADS)\n
+  \t2.$7.99/month(With ADS)\n
+  \t3.$99.99/year(NO ADS)\n
+Also,If you are a new user, you will be entitled to watch two movies for free"
+  utter_reply_sorry:
+  - text: Sorry, I don't seem to understand your intention
+  utter_confirm:
+  - text: Would you like to subscribe to WtachFlix membership service?
+  utter_manual_service:
+  - text: Would you like me to transfer you to a human service
+  utter_handle_affirmation:
+  - text: 'Here is the member subscription page link: xxx.xxx.com'
+  utter_handle_denial:
+  - text: |-
+      WatchFlix will bring you many movies and TV shows every month, 
+      so you can subscribe to our membership service whenever you want.
+  utter_affirm_manual:
+  - text: You are being transferred to manual service. Your transfer is successful
+  utter_deny_manual:
+  - text: Is there anything else I can do for you
+
+  utter_swear_word:
+  - text: "Don't be angry. We'll try to improve our service."
+
+  utter_nice_word:
+  - text: "Thank you for your kindness"
+
+  utter_laugh:
+  - text: "You seem to be in a good mood"
+
+  utter_thanks:
+  - text: "I'm glad I could help you"
+
+  utter_daily_greeting:
+  - text: "I'm fine, thanks. What can I do for you?"
+
+  utter_tell_jokes:
+  - text: "Why the letter B is sitting so cool?\nBecause it is in between A and C!"
+  - text: "What kind of school do giraffes like to go?\nOnly the High school"
+
+
+  utter_choose_free:
+  - text: "Here is the member subscription page link: xxx.xxxfree.com"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
